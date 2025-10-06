@@ -4,1144 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="shortcut icon" href="Assets/pothys_logo.png" type="image/x-icon">
   <title>Pothiys</title>
-  <style>
-    /* body {
-      position: relative;
-    } */
-
-    * {
-      text-decoration: none;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .whole-container {
-      width: 100%;
-      top: 0;
-      position: sticky;
-      background-color: #FFFFFF;
-      box-shadow: 0px 0px 5px 0px gainsboro;
-      z-index: 3;
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
-    }
-
-    /* ---------main-nav----------- */
-    .main-nav {
-      display: flex;
-      text-align: center;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      background-color: #019147;
-      padding: 10px;
-    }
-
-    .divider {
-      margin: 0 10px;
-      color: black;
-      /* Color of the pipe divider */
-    }
-
-    /* ------------nav-bar---------- */
-
-    .nav-bar {
-      display: flex;
-      /* gap: %; */
-      position: relative;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      padding: 15px 0px;
-    }
-
-    .nav-1 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      /* width: 50%; */
-    }
-
-    .nav-logo img {
-      margin-left: 20%;
-      width: 50%;
-    }
-
-
-    .nav-links {
-      display: flex;
-      gap: 10px;
-
-      /* width: max-content; */
-      flex-wrap: wrap;
-      /* padding: 10px; */
-    }
-
-    .nav-links ul :hover {
-      color: #019147;
-    }
-
-
-
-    /* .nav-2 {
-      display: flex;
-      justify-content: space-evenly;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 0%;
-      align-items: center;
-      width: 50%;
-    } */
-
-    .search-shoping_icon {
-      display: flex;
-      flex-wrap: wrap;
-      /* flex-direction: column; */
-      /* width: 50%; */
-      /* justify-content: space-evenly; */
-
-    }
-
-    .search-container {
-      display: flex;
-      justify-content: flex-start;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-      /* width: 100%; */
-    }
-
-    .search-box {
-      flex-grow: 1;
-      padding: 10px 15px;
-      border: none;
-      outline: none;
-      font-size: 16px;
-    }
-
-    .search-button {
-      background-color: #6a6a6a;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-size: 18px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .search-button:hover {
-      background-color: #555;
-    }
-
-    .buy {
-      padding-right:10px ;
-    }
-
-
-    /* ------------banner-container------- */
-    .pothys {
-      margin: 0px 50px;
-    }
-
-    h1 {
-      margin: 50px 0px;
-      text-align: center;
-    }
-
-
-    .banner-container img {
-      width: 100%;
-      margin: 50px 0px;
-    }
-
-    .banner-container2 img {
-      width: 100%;
-      margin: 50px 0px;
-    }
-
-    /* -------Curated----------- */
-
-    .Curated-section {
-      width: 15%;
-      height: 15%;
-      display: flex;
-      flex-wrap: wrap;
-
-      position: relative;
-    }
-
-    .Curated-section p {
-      text-align: center;
-    }
-
-
-    .Curated-section img:hover {
-      transition: 1s;
-      transform: scale(1.05);
-    }
-
-    .Curated-section img {
-      width: 100%;
-      border-radius: 50%;
-      /* height: auto;  */
-      /* display: block;  */
-    }
-
-    .Curated-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      /* gap: 10px; */
-    }
-
-    /* --------------------shop-category------------- */
-
-    /* .shop-category{
-  width: 80%;
-} */
-    .shop-category-container {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 2%;
-      align-items: center;
-      justify-content: center;
-      background-color: #EEEEEE;
-      padding: 25px 0px;
-      margin: 50px 0px;
-
-    }
-
-    .shop-category-item {
-      width: 10%;
-      height: 10%;
-      padding: 15px 17px 15px 17px;
-      background-color: #FFFFFF;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-bottom: 2%;
-
-    }
-
-    .shop-category-item img:hover {
-
-      transition: 1s;
-      transform: scale(1.05);
-    }
-
-    .shop-category-item img {
-      width: 100%;
-      /* padding: 5px; */
-      border-radius: 10px;
-    }
-
-    .shop-category-item p {
-      padding: 10px;
-      text-align: center;
-      font-size: 18px;
-    }
-
-    /* ------------BrandsYouLove---------------- */
-
-    .BrandsYouLove-container {
-      width: 50%;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      margin: 50px 0px;
-    }
-
-
-
-
-    .BrandsYouLove-item img {
-      width: 100%;
-    }
-
-    /* ------------QuenchYourThirst--------- */
-
-    /* .QuenchYourThirst-item {
-      width: 50%;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-direction: row;
-      justify-content: center;
-    } */
-
-    .QuenchYourThirst-container {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 2%;
-      align-items: center;
-      text-align: left;
-      justify-content: center;
-      background-color: #EEEEEE;
-      padding: 25px 0px;
-      /* margin: 50px 0px; */
-    }
-
-    .QuenchYourThirst-item {
-      width: 18%;
-      height: 18%;
-      padding: 15px;
-      background-color: #FFFFFF;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      line-height: 2.2;
-      margin-bottom: 2%;
-      text-align: left;
-    }
-
-    .QuenchYourThirst-item img:hover {
-      transition: 1s;
-      transform: scale(1.05);
-    }
-
-    .QuenchYourThirst-item img {
-      width: 100%;
-    }
-
-    .QuenchYourThirst-item select {
-      width: 100%;
-      height: 2rem;
-      background-color: #FFFFFF;
-      color: rgba(0, 0, 0, 0.877);
-      ;
-      border: 0.5px solid rgb(110 105 105 / 27%);
-
-    }
-
-    .QuenchYourThirst-item,
-    .p {
-      display: flex;
-      gap: 10px;
-    }
-
-
-
-    .btn {
-      width: 100%;
-      height: 2rem;
-      background-color: #019147;
-      color: #FFFFFF;
-      border: none;
-      border-radius: 5px;
-
-    }
-
-    .btn:hover {
-      background-color: cadetblue;
-    }
-
-
-
-
-    .pri {
-      text-decoration: line-through;
-    }
-
-    .price {
-      color: red;
-    }
-
-
-    .btn-1 {
-      width: 20%;
-      height: 2.9rem;
-      background-color: #019147;
-      color: #FFFFFF;
-      border: none;
-      border-radius: 5px;
-
-    }
-
-    .btn-1:hover {
-      background-color: cadetblue;
-    }
-
-
-    .QuenchYourThirst-container-1 {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 2%;
-      align-items: center;
-      justify-content: center;
-      padding: 25px;
-      margin: 50px 0px;
-    }
-
-    .QuenchYourThirst-item-1 {
-      width: 18%;
-      height: 18%;
-      padding: 15px;
-      background-color: #FFFFFF;
-      border: 0.5px solid rgb(110 105 105 / 27%);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      line-height: 2.2;
-      margin-bottom: 2%;
-      text-align: left;
-    }
-
-    .QuenchYourThirst-item-1 img:hover {
-      transition: 1s;
-      transform: scale(1.05);
-    }
-
-    .QuenchYourThirst-item-1 img {
-      width: 100%;
-    }
-
-    .QuenchYourThirst-item-1 select {
-      width: 100%;
-      height: 2rem;
-      background-color: #FFFFFF;
-      border: 0.5px solid rgb(110 105 105 / 27%);
-
-    }
-
-
-    /*-----------------------------fullfooter -----------------------------------------*/
-
-    body {
-      margin: 0%;
-      padding: 0%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    .fullfooter {
-      display: grid;
-      row-gap: 20%;
-      grid-template-columns: 1fr 1fr 2fr;
-      grid-template-areas:
-        'fot1 fot2 fot3';
-      padding: 50px 50px 0px 50px;
-      background-color: rgba(252, 219, 219, 0.795);
-      z-index: 10;
-
-
-    }
-
-   
-
-    .fot1 {
-      grid-area: fot1;
-      line-height: 1.5;
-    }
-
-    .fot2 {
-      grid-area: fot2;
-      line-height: 1.5;
-    }
-
-    .fot2-p2 {
-      font-size: 15px;
-    }
-
-    .f11 {
-      grid-area: f11;
-      padding: 10px;
-      line-height: 1.5;
-    }
-
-    .f12 {
-      grid-area: f12;
-      line-height: 1.5;
-      padding: 10px;
-    }
-
-    .ft {
-      line-height: 1.5;
-    }
-
-    .ft img {
-      width: 20%;
-    }
-
-    .fot2 a {
-      text-decoration: none;
-      color: black;
-    }
-
-
-    .last {
-      padding: 0px 50px;
-    }
-
-    .last a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .last a:hover {
-      transition-duration: 1s;
-      color: rgb(1, 145, 71);
-    }
-
-    .fot2 a:hover {
-      color: rgb(1, 145, 71);
-      transition-duration: 1s
-    }
-
-    .fot3 {
-      grid-area: fot3;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      gap: 20%;
-      /* align-items: center; */
-
-      /* margin-left: 40px; */
-    }
-
-    .fot3 a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .fot3 a:hover {
-      color: rgb(1, 145, 71);
-      transition-duration: 1s
-    }
-
-
-    .f1 img {
-      height: 75px;
-    }
-
-    .footer-bottom {
-      display: flex;
-      padding-left: px;
-      background-color: rgba(252, 219, 219, 0.795);
-      padding-bottom: 50px;
-
-
-    }
-
-    .fot1 a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .fot1 a:hover {
-      color: rgb(1, 145, 71);
-      transition-duration: 1s;
-    }
-
-
-    /* .social-icons {
-            margin-left: 205px;
-        } */
-
-    .social-icons img {
-      height: 30px;
-    }
-
-    .last {
-      margin-top: 40px;
-    }
-
-
-    @media (max-width:1024px) {
-      .nav-bar {
-        gap: 3%;
-      }
-    }
-
-    @media (max-width:768px) {
-      .nav-bar{
-        gap: 0px;
-        max-width: 100%;
-      }
-      .nav-links{
-        width: max-content;
-        font-size: smaller;
-      }
-
-          .nav-logo img {
-        width: 48%;
-        margin-left: 10px;
-
-    }
-      .search-box {
-    flex-grow: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    }
-
-  }
-
-   @media (max-width:425px) {
-
-     * {
-      text-decoration: none;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .whole-container {
-      width: 100%;
-      top: 0;
-      position: sticky;
-      background-color: #FFFFFF;
-      box-shadow: 0px 0px 5px 0px gainsboro;
-      z-index: 3;
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
-    }
-
-    /* ---------main-nav----------- */
-    .main-nav {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      background-color: #019147;
-      padding: 10px;
-    }
-    .nav-left{
-      display: flex;
-      justify-content: space-between;
-      font-size: 12px;
-    }
-
-        .nav-right{
-      display: flex;
-      justify-content: space-between;
-      font-size: 12px;
-    }
-
-    .divider {
-      margin: 0 10px;
-      color: black;
-      /* Color of the pipe divider */
-    }
-
-    /* ------------nav-bar---------- */
-
-    .nav-bar {
-      display: flex;
-      align-content: center;
-      font-size: 12px;
-      gap: -1;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      padding: 15px 0px;
-    }
-
-
-    .nav-logo{
-      width: 5%;
-    }
-
-    .nav-logo img {
-      width: 100%;
-    }
-
-    .nav-links ul :hover {
-      color: #019147;
-    }
-
-
-
-    
-
-    .search-shoping_icon {
-      display: flex;
-      flex-wrap: wrap;
-      
-
-    }
-
-    .search-container {
-      display: flex;
-      justify-content: flex-start;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-      /* width: 100%; */
-    }
-
-    .search-box {
-      flex-grow: 1;
-      padding: 2.5px 3.05px;
-      border: none;
-      outline: none;
-      font-size: 6px;
-    }
-
-    .search-button {
-      background-color: #6a6a6a;
-      color: white;
-      border: none;
-      padding: 5px 7px;
-      cursor: pointer;
-      font-size: 10px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .search-button:hover {
-      background-color: #555;
-    }
-
-    .buy {
-      padding-right:10px ;
-    }
-
-
-    /* ------------banner-container------- */
-    .pothys {
-      margin: 0px 20px;
-    }
-
-    h1 {
-      margin: 20px 0px;
-      text-align: center;
-    }
-
-
-    .banner-container img {
-      width: 100%;
-      margin: 20px 0px;
-    }
-
-    .banner-container2 img {
-      width: 100%;
-      margin: 20px 0px;
-    }
-
-    /* -------Curated----------- */
-
-    .Curated-section {
-      width: 40%;
-      height: 40%;
-      display: flex;
-      flex-wrap: wrap;
-
-      position: relative;
-    }
-
-    .Curated-section p {
-      text-align: center;
-      padding: 5px;
-    }
-
-
-    .Curated-section img:hover {
-      transition: 1s;
-      transform: scale(1.05);
-    }
-
-    .Curated-section img {
-      width: 100%;
-      border-radius: 50%;
-      /* height: auto;  */
-      /* display: block;  */
-    }
-
-    .Curated-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 10px;
-      justify-content: center;
-      /* gap: 10px; */
-    }
-
-    /* --------------------shop-category------------- */
-
-    /* .shop-category{
-  width: 80%;
-} */
-    .shop-category-container {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 30px;
-      align-items: center;
-      justify-content: center;
-      background-color: #EEEEEE;
-      padding: 25px 0px;
-      margin: 20px 0px;
-
-    }
-
-    .shop-category-item {
-      width: 30%;
-      height: 30%;
-      padding: 15px 17px 15px 17px;
-      background-color: #FFFFFF;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-bottom: 2%;
-
-    }
-
-    .shop-category-item img:hover {
-
-      transition: 1s;
-      transform: scale(1.05);
-    }
-
-    .shop-category-item img {
-      width: 100%;
-      /* padding: 5px; */
-      border-radius: 10px;
-    }
-
-    .shop-category-item p {
-      padding: 10px;
-      text-align: center;
-      font-size: 18px;
-    }
-
-    /* ------------BrandsYouLove---------------- */
-
-    .BrandsYouLove-container {
-      width: 50%;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      margin: 50px 0px;
-    }
-
-
-
-
-    .BrandsYouLove-item img {
-      width: 100%;
-    }
-
-    .carousel-track {
-      gap: 50px;
-    }
-
-    /* ------------QuenchYourThirst--------- */
-
-    /* .QuenchYourThirst-item {
-      width: 50%;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-direction: row;
-      justify-content: center;
-    } */
-
-    .QuenchYourThirst-container {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 7%;
-      align-items: center;
-      text-align: left;
-      justify-content: center;
-      background-color: #EEEEEE;
-      padding: 25px 0px;
-      /* margin: 50px 0px; */
-    }
-
-    .QuenchYourThirst-item {
-      width: 30%;
-      height: 30%;
-      padding: 15px;
-      background-color: #FFFFFF;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      line-height: 2.2;
-      margin-bottom: 30px;
-      text-align: left;
-    }
-
-    .QuenchYourThirst-item img:hover {
-      transition: 1s;
-      transform: scale(1.05);
-    }
-
-    .QuenchYourThirst-item img {
-      width: 100%;
-    }
-
-    .QuenchYourThirst-item select {
-      width: 100%;
-      height: 2rem;
-      background-color: #FFFFFF;
-      color: rgba(0, 0, 0, 0.877);
-      ;
-      border: 0.5px solid rgb(110 105 105 / 27%);
-
-    }
-
-    .QuenchYourThirst-item,
-    .p {
-      display: flex;
-      gap: 10px;
-    }
-
-
-
-    .btn {
-      width: 100%;
-      height: 2rem;
-      background-color: #019147;
-      color: #FFFFFF;
-      border: none;
-      border-radius: 5px;
-
-    }
-
-    .btn:hover {
-      background-color: cadetblue;
-    }
-
-
-
-
-    .pri {
-      text-decoration: line-through;
-    }
-
-    .price {
-      color: red;
-    }
-
-
-    .btn-1 {
-      width: 20%;
-      height: 2.9rem;
-      background-color: #019147;
-      color: #FFFFFF;
-      border: none;
-      border-radius: 5px;
-
-    }
-
-    .btn-1:hover {
-      background-color: cadetblue;
-    }
-
-
-    .QuenchYourThirst-container-1 {
-      width: 92%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 30px;
-      align-items: center;
-      justify-content: center;
-      padding: 25px;
-      margin: 50px 0px;
-    }
-
-    .QuenchYourThirst-item-1 {
-      width: 30%;
-      height: 30%;
-      padding: 15px;
-      background-color: #FFFFFF;
-      border: 0.5px solid rgb(110 105 105 / 27%);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      line-height: 2.2;
-      margin-bottom: 2%;
-      text-align: left;
-    }
-
-    .QuenchYourThirst-item-1 img:hover {
-      transition: 1s;
-      transform: scale(1.05);
-    }
-
-    .QuenchYourThirst-item-1 img {
-      width: 100%;
-    }
-
-    .QuenchYourThirst-item-1 select {
-      width: 100%;
-      height: 2rem;
-      background-color: #FFFFFF;
-      border: 0.5px solid rgb(110 105 105 / 27%);
-
-    }
-
-
-    /*-----------------------------fullfooter -----------------------------------------*/
-
-    body {
-      margin: 0%;
-      padding: 0%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    .fullfooter {
-     display: flex;
-     flex-direction: column;
-
-
-    }
-
-   
-
-    .fot1 {
-      grid-area: fot1;
-      line-height: 1.5;
-    }
-
-    .fot2 {
-      grid-area: fot2;
-      line-height: 1.5;
-    }
-
-    .fot2-p2 {
-      font-size: 15px;
-    }
-
-    .f11 {
-      grid-area: f11;
-      padding: 10px;
-      line-height: 1.5;
-    }
-
-    .f12 {
-      grid-area: f12;
-      line-height: 1.5;
-      padding: 10px;
-    }
-
-    .ft {
-      line-height: 1.5;
-    }
-
-    .ft img {
-      width: 20%;
-    }
-
-    .fot2 a {
-      text-decoration: none;
-      color: black;
-    }
-
-
-    .last {
-      padding: 0px 50px;
-    }
-
-    .last a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .last a:hover {
-      transition-duration: 1s;
-      color: rgb(1, 145, 71);
-    }
-
-    .fot2 a:hover {
-      color: rgb(1, 145, 71);
-      transition-duration: 1s
-    }
-
-    .fot3 {
-      grid-area: fot3;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      gap: 20%;
-      /* align-items: center; */
-
-      /* margin-left: 40px; */
-    }
-
-    .fot3 a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .fot3 a:hover {
-      color: rgb(1, 145, 71);
-      transition-duration: 1s
-    }
-
-
-    .f1 img {
-      height: 75px;
-    }
-
-    .footer-bottom {
-      display: flex;
-      padding-left: 0px;
-      background-color: rgba(252, 219, 219, 0.795);
-      padding-bottom: 50px;
-
-
-    }
-
-    .fot1 a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .fot1 a:hover {
-      color: rgb(1, 145, 71);
-      transition-duration: 1s;
-    }
-
-
-    /* .social-icons {
-            margin-left: 205px;
-        } */
-
-    .social-icons img {
-      height: 30px;
-    }
-
-    .last {
-      margin-top: 40px;
-    }
-  }
-  </style>
 </head>
 
 <body
@@ -1171,18 +37,36 @@
     <section>
       <div class="nav-bar">
         <!-- <div class="nav-1"> -->
-          <div class="nav-logo">
-            <img src="Assets/pothys_logo.png" alt="pothys_logo" />
-          </div>
-          <div class="nav-links">
-            
-              <li>Shop by Category </li>
-              <li>Home</li>
-              <li>Deals</li>
-              <li>New Arrivals</li>
-            
-          </div>
-        <!-- </div> -->
+        <div class="nav-logo">
+          <img src="Assets/pothys_logo.png" alt="pothys_logo" />
+        </div>
+
+        <div class="menu-iconn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="navv">
+          <li class="item"><a class="link" href="#home" aria-label="Navigate to Home">Shop by Category</a></li>
+          <li class="item"><a class="link" href="#about" aria-label="Navigate to About">Home
+</a></li>
+          <li class="item"><a class="link" href="#projectss" aria-label="Navigate to Projects">Deals</a></li>
+          <li class="item"><a class="link" href="Achievements.html" aria-label="Navigate to Projects">New Arrivals</a>
+          </li>
+        </ul>
+        <!-- Scipt for the nav bar!!! -->
+
+        <script>
+          // Select elements
+          const menuIconn = document.querySelector('.menu-iconn');
+          const navMenu = document.querySelector('.navv');
+
+          // Toggle functionality
+          menuIconn.addEventListener('click', () => {
+            menuIconn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+          });
+        </script>
 
 
         <!-- <div class="nav-2"> -->
@@ -1335,12 +219,13 @@
 
       .carousel-track {
         display: flex;
+        gap: 0px;
         animation: slide 25s infinite;
         /* duration depends on number of images */
       }
 
       .carousel-slide {
-        min-width: 30%;
+        /* min-width: 35%; */
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -1352,6 +237,7 @@
         width: 120px;
         height: 120px;
         object-fit: contain;
+        padding: 3px;
         border-radius: 50%;
         background: white;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -1404,14 +290,15 @@
           transform: translateX(0);
         }
       }
+      
     </style>
 
     <div class="carousel">
       <div class="carousel-track">
-        <div class="carousel-slide"><img src="/Assets/carosel/Lakme.jpg" alt="GRB">
+        <div class="carousel-slide"><img src="/Assets/Lakme.jpg" alt="GRB">
           <p>Lakme</p>
         </div>
-        <div class="carousel-slide"><img src="/Assets/carosel/Aashirvaad.jpg" alt="Bru">
+        <div class="carousel-slide"><img src="/Assets/Aashirvaad.jpg" alt="Bru">
           <p>Aashirvaad</p>
         </div>
         <div class="carousel-slide"><img src="/Assets/Colgate.jpg" alt="Colgate">
@@ -1525,21 +412,10 @@
         font-weight: bold;
       }
     </style>
-    <div class="QuenchYourThirst-container">
-      <div class="QuenchYourThirst-item">
-        <img src="Assets/3rose.jpeg" alt="3rose">
-        <p>Brooke Bond 3 Roses Top Star Tea</p>
-        <select name="amount" id="amount">
-          <option value="500">500 gm</option>
-          <option value="250">250 gm</option>
-          <option value="100">100 gm</option>
-        </select>
-        <p class="p"> <s class="pri">₹225</s> <span class="price">₹222.75</span></p>
+    <div class="QuenchYourThirst-container-11">
 
-        <input class="btn" type="button" value="Add to Cart">
-      </div>
 
-      <div class="QuenchYourThirst-item">
+      <div class="QuenchYourThirst-item-1">
         <img src="Assets/3rose.jpeg" alt="3rose">
         <p>Brooke Bond 3 Roses Top Star Tea</p>
         <select name="amount" id="amount">
@@ -1551,7 +427,7 @@
         <input class="btn" type="button" value="Add to Cart">
       </div>
 
-      <div class="QuenchYourThirst-item">
+      <div class="QuenchYourThirst-item-1">
         <img src="Assets/3rose.jpeg" alt="3rose">
         <p>Brooke Bond 3 Roses Top Star Tea</p>
         <select name="amount" id="amount">
@@ -1563,7 +439,19 @@
         <input class="btn" type="button" value="Add to Cart">
       </div>
 
-      <div class="QuenchYourThirst-item">
+      <div class="QuenchYourThirst-item-1">
+        <img src="Assets/3rose.jpeg" alt="3rose">
+        <p>Brooke Bond 3 Roses Top Star Tea</p>
+        <select name="amount" id="amount">
+          <option value="500">500 gm</option>
+          <option value="250">250 gm</option>
+          <option value="100">100 gm</option>
+        </select>
+        <p class="p"> <s class="pri">₹225</s> <span class="price">₹222.75</span></p>
+        <input class="btn" type="button" value="Add to Cart">
+      </div>
+
+      <div class="QuenchYourThirst-item-1">
         <img src="Assets/3rose.jpeg" alt="3rose">
         <p>Brooke Bond 3 Roses Top Star Tea</p>
         <select name="amount" id="amount">
@@ -1576,9 +464,11 @@
         <input class="btn" type="button" value="Add to Cart">
 
       </div>
-
-      <input class="btn-1" type="button" value="Show All ↗">
+   
     </div>
+       <div>
+        <input class="btn-1" type="button" value="Show All ↗">
+      </div>
 
     <!-- -----------banner------- -->
     <div class="banner-container">
@@ -1590,7 +480,7 @@
     <!-- ------------DairyDelightsForYou---------- -->
 
 
-    <h1>Quench Your Thirst</h1>
+    <h1>Dairy Delights For You</h1>
     <div class="QuenchYourThirst-container-1">
 
 
@@ -1643,10 +533,13 @@
         <input class="btn" type="button" value="Add to Cart">
 
       </div>
-
-      <input class="btn-1" type="button" value="Show All ↗">
     </div>
+          <div>
+        <input class="btn-2" type="button" value="Show All ↗">
+      </div>
   </div>
+
+  
 
   <!-- -------------------footer Section ---------------------->
   <div class="fullfooter">
@@ -1705,6 +598,7 @@
     </div>
 
   </div>
+
 
 </body>
 
